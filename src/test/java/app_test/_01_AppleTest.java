@@ -9,4 +9,10 @@ public class _01_AppleTest extends Base{
         driver.get("https://www.apple.com/");
         Assert.assertEquals(driver.getTitle(), "Apple");
     }
+
+    @Test(testName = "Apple heading validation", priority = 2)
+    public void validateAppleMainHeading(){
+        driver.get("https://www.apple.com/");
+        Assert.assertTrue(appleHomePage.firstHeading.isDisplayed());
+    }
 }
