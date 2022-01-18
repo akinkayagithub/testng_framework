@@ -3,7 +3,8 @@ package app_test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.AppleHomePage;
+import org.testng.annotations.BeforeTest;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class Base {
@@ -15,6 +16,12 @@ public class Base {
 
     public WebDriver driver;
     public AppleHomePage appleHomePage;
+    public int explicitWait;
+
+    @BeforeTest
+    public void setGlobalVariables(){
+        explicitWait = Integer.parseInt(ConfigReader.getProperty("explicitTimeOut"));
+    }
 
     @BeforeMethod
     public void setUp(){
