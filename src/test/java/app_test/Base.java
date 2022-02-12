@@ -15,7 +15,6 @@ public class Base {
      */
 
     public WebDriver driver;
-    public AppleHomePage appleHomePage;
     public int explicitWait;
 
     @BeforeTest
@@ -26,7 +25,6 @@ public class Base {
     @BeforeMethod
     public void setUp(){
         driver = Driver.getDriver();
-        appleHomePage = new AppleHomePage(driver);
     }
 
     @AfterMethod

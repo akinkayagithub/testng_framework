@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Carvana Test Suite">
-    <test verbose="2" preserve-order="true" name="Carvana Test">
+<suite name="Smoke">
+    <test verbose="2" preserve-order="true" name="Critical Functionalities">
         <classes>
             <class name="app_test.CarvanaTest">
                 <methods>
                     <include name="validateTitleAndUrl"/>
                     <include name="validateCarvanaLogo"/>
-                    <include name="validateNavigationHeaderSections"/>
-                    <include name="validateInvalidCredentialsErrorMessage"/>
-                    <include name="validateSearchHeader"/>
-                    <include name="validateResultTiles"/>
                 </methods>
             </class>
         </classes>
